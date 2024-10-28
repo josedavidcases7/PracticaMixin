@@ -1,0 +1,151 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  overflow-x: hidden;
+}
+
+footer {
+  background-color: #004d40;
+  font-family: sans-serif;
+  color: white;
+  padding: 20px;
+  position: relative;
+  text-align: center;
+}
+footer h2 {
+  margin-bottom: 20px;
+  font-size: 24px;
+}
+footer .contacto-footer {
+  margin-bottom: 20px;
+}
+footer .contacto-footer p {
+  margin: 5px 0;
+  font-size: 18px;
+}
+footer .redes-sociales a {
+  margin: 0 10px;
+  color: white;
+  font-size: 24px;
+  transition: color 0.3s;
+}
+footer .redes-sociales a:hover {
+  color: white;
+}
+@media (max-width: 820px) {
+  footer .formulario form {
+    max-width: 90%;
+    padding: 18px;
+  }
+  footer .formulario form h2 {
+    font-size: 1.5rem;
+  }
+  footer .formulario form input, footer .formulario form textarea {
+    font-size: 1rem;
+    padding: 12px;
+  }
+  footer .formulario form .boton-enviar {
+    font-size: 1rem;
+  }
+  footer footer {
+    padding: 15px;
+  }
+  footer footer h2 {
+    font-size: 22px;
+  }
+  footer footer .contacto-footer p {
+    font-size: 16px;
+  }
+  footer footer .redes-sociales a {
+    font-size: 20px;
+  }
+}
+
+.formulario {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+  background-color: #f9f9f9;
+  font-family: sans-serif;
+}
+.formulario form {
+  width: 100%;
+  max-width: 500px;
+  padding: 20px;
+  background-color: #ffffff;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  margin: 20px;
+}
+.formulario form h2 {
+  text-align: center;
+  margin-bottom: 20px;
+  font-size: 1.6rem;
+  color: #333;
+}
+.formulario form label {
+  display: block;
+  margin-bottom: 5px;
+  font-weight: bold;
+  color: #555;
+}
+.formulario form input, .formulario form textarea {
+  width: 100%;
+  padding: 12px;
+  margin-bottom: 15px;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  font-size: 1.1rem;
+}
+.formulario form textarea {
+  resize: vertical;
+  min-height: 100px;
+}
+.formulario form .boton-enviar {
+  width: 100%;
+  padding: 12px;
+  background-color: #4CAF50;
+  color: #fff;
+  border: none;
+  border-radius: 4px;
+  font-size: 1.1rem;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+.formulario form .boton-enviar:hover {
+  background-color: #45a049;
+}
+
+@media (max-width: 820px) {
+  .formulario form {
+    max-width: 90%;
+    padding: 18px;
+  }
+  .formulario form h2 {
+    font-size: 1.5rem;
+  }
+  .formulario form input, .formulario form textarea {
+    font-size: 1rem;
+    padding: 12px;
+  }
+  .formulario form .boton-enviar {
+    font-size: 1rem;
+  }
+  footer {
+    padding: 15px;
+  }
+  footer h2 {
+    font-size: 22px;
+  }
+  footer .contacto-footer p {
+    font-size: 16px;
+  }
+  footer .redes-sociales a {
+    font-size: 20px;
+  }
+}/*# sourceMappingURL=main.css.map */

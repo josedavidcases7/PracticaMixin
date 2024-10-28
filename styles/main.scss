@@ -1,0 +1,175 @@
+// VARIABLES DEL FORMULARIO
+$maximo-ancho: 500px;
+$padding: 20px;
+$background-color-form: #ffffff;
+$shadow-color: rgba(0, 0, 0, 0.2);
+
+// VARIABLES DEL FOOTER
+$color-background-footer: #004d40;
+$color-text-footer: white;
+$text-size-footer: 18px;
+$title-size-footer: 24px;
+$font-family-footer: sans-serif;
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  overflow-x: hidden;
+}
+
+// MIXIN DEL FORMULARIO
+@mixin form-style($max-width: $maximo-ancho, $padding: $padding, $bg-color: $background-color-form, $shadow-color: $shadow-color) {
+  .formulario {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    background-color: #f9f9f9;
+    font-family: sans-serif;
+
+    form {
+      width: 100%;
+      max-width: $maximo-ancho;
+      padding: $padding;
+      background-color: $background-color-form;
+      border-radius: 8px;
+      box-shadow: 0 4px 8px $shadow-color;
+      margin: 20px;
+
+      h2 {
+        text-align: center;
+        margin-bottom: 20px;
+        font-size: 1.6rem;
+        color: #333;
+      }
+
+      label {
+        display: block;
+        margin-bottom: 5px;
+        font-weight: bold;
+        color: #555;
+      }
+
+      input, textarea {
+        width: 100%;
+        padding: 12px;
+        margin-bottom: 15px;
+        border: 1px solid #ddd;
+        border-radius: 4px;
+        font-size: 1.1rem;
+      }
+
+      textarea {
+        resize: vertical;
+        min-height: 100px;
+      }
+
+      .boton-enviar {
+        width: 100%;
+        padding: 12px;
+        background-color: #4CAF50;
+        color: #fff;
+        border: none;
+        border-radius: 4px;
+        font-size: 1.1rem;
+        cursor: pointer;
+        transition: background-color 0.3s ease;
+
+        &:hover {
+          background-color: #45a049;
+        }
+      }
+    }
+  }
+}
+
+// Mixin del footer
+@mixin footer-styles($colorbc: $color-background-footer, $colortexto: $color-text-footer, $tamaniotexto: $text-size-footer, $tamaniotitulo: $title-size-footer, $tipofuente: $font-family-footer) {
+  background-color: $colorbc;
+  font-family: $tipofuente;
+  color: $colortexto;
+  padding: 20px;
+  position: relative;
+  text-align: center;
+
+  h2 {
+    margin-bottom: 20px;
+    font-size: $tamaniotitulo;
+  }
+
+  .contacto-footer {
+    margin-bottom: 20px;
+
+    p {
+      margin: 5px 0;
+      font-size: $tamaniotexto;
+    }
+  }
+
+  .redes-sociales {
+    a {
+      margin: 0 10px;
+      color: $colortexto;
+      font-size: 24px;
+      transition: color 0.3s;
+
+      &:hover {
+        color: lighten($colortexto, 10%);
+      }
+    }
+  }
+}
+
+// Media queries para móvil y tablet
+@mixin responsive {
+  @media (max-width: 820px) {
+    .formulario {
+      form {
+        max-width: 90%;
+        padding: 18px;
+
+        h2 {
+          font-size: 1.5rem;
+        }
+
+        input, textarea {
+          font-size: 1rem;
+          padding: 12px;
+        }
+
+        .boton-enviar {
+          font-size: 1rem;
+        }
+      }
+    }
+
+    footer {
+      padding: 15px;
+      
+      h2 {
+        font-size: 22px;
+      }
+
+      .contacto-footer p {
+        font-size: 16px;
+      }
+
+      .redes-sociales {
+        a {
+          font-size: 20px;
+        }
+      }
+    }
+  }
+}
+
+footer {
+  @include footer-styles;
+  @include responsive;
+}
+
+@include form-style;
+@include responsive;
